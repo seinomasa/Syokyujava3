@@ -1,17 +1,18 @@
 
 public class DisplayFaceOdject extends MyFrame{
 	public void run() {
-       
-		Face face1=new Face(50,50);
-        Face face2 = new Face(200, 100);
+       Face[] faces=new Face[3]
+		faces[0]=new Face(50,50,10,5);
+       faces[1]=new Face(200,100,-10,-5);
+       faces[2]=new Face(0,100,5,0);
         for (int i = 0; i < 30; i++) {
             clear();
-            face1.draw(this);
-            face2.draw(this);
-            face1.x += 10;
-            face1.y += 5;
-            face2.x -= 10;
-            face2.y -= 5;
+            face[0].draw(this);
+            face[1].draw(this);
+            face[2].draw(this);
+            face[0].move();
+            face[1].move();
+            face[2].move();
             sleep(0.1);
         }
        
